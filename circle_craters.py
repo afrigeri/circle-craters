@@ -511,6 +511,8 @@ class CircleCraters(object):
         source = self.layer.crs()
         xform = self.crs_transform(source, destination)
 
+	print circle.center.x, circle.center.y
+
         line = [
             QgsPoint(circle.center.x, circle.center.y),
             QgsPoint(circle.center.x + circle.radius, circle.center.y),
@@ -538,8 +540,8 @@ class CircleCraters(object):
         ])
 
         self.layer.startEditing()
-        # self.layer.dataProvider().addFeatures([feature])
-        self.layer.addFeature(feature, True)
+        self.layer.dataProvider().addFeatures([feature])
+        #self.layer.addFeature(feature, True)
         self.layer.commitChanges()
 
         # update layer's extent when new features have been added
