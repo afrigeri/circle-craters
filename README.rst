@@ -8,6 +8,8 @@ Current Status: In Testing
 
 Written for and tested on QGIS version 2.6 (Brighton).
 
+Updated by afrigeri to QGIS version 3.0
+
 Features include:
 
 * Flexibility to crater count in a GIS environment on Windows, OS X, or Linux
@@ -44,7 +46,7 @@ Installation
 
 3. Use the makefile to compile and copy the files to the QGIS plugin directory
    (run make deploy). The QGIS plugin directory should be in
-   ~/.qgis2/python/plugins.
+   ~/.local/share/QGIS/QGIS3/profiles/default/.
 
 4. On the command line run::
 
@@ -52,11 +54,11 @@ Installation
 
 5. You may get see the following error messages::
 
-       make: pyrcc4: Command not found.
+       make: pyrcc5: Command not found.
 
    If you see this message install the Python Qt4 developer tools by running::
 
-       $ sudo apt-get install pyqt4-dev-tool.
+       $ sudo apt-get install pyqt5-dev-tool.
 
    Another commmon error::
 

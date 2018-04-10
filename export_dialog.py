@@ -23,16 +23,19 @@
 
 import os
 
-from PyQt4 import QtGui, QtCore, uic
+from qgis.PyQt import QtGui, QtCore, uic
 
 from .errors import CircleCraterError
+
+    
+from qgis.PyQt.QtWidgets import QDialog, QDialogButtonBox
 
 
 ExportDialogBase, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'export_dialog_base.ui'))
 
 
-class ExportDialog(QtGui.QDialog, ExportDialogBase):
+class ExportDialog(QDialog, ExportDialogBase):
     selected = QtCore.pyqtSignal(object, object, str)
 
     def __init__(self, parent=None):

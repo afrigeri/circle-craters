@@ -9,8 +9,9 @@
 [general]
 name=Circle Craters
 qgisMinimumVersion=2.0
+qgisMaximumVersion=3.99
 description=A crater counting tool for planetary science
-version=0.1
+version=0.2
 author=Sarah E Braden
 email=braden.sarah@gmail.com
 
